@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `ORDER_ITEM` (
   `ID` int NOT NULL,
   `DATE` text NOT NULL,
-  `DELIVERED` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'N'
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `DELIVERED` varchar(10) CHARACTER SET utf8mb4 NOT NULL DEFAULT 'N'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -43,7 +43,7 @@ CREATE TABLE `REL_ORDER_USER` (
   `ID` int NOT NULL,
   `USER_ID` int NOT NULL,
   `ORDER_ID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -80,7 +80,7 @@ CREATE TABLE `REL_ORDER_WINE` (
   `ID` int NOT NULL,
   `ORDER_ID` int NOT NULL,
   `WINE_ID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -92,7 +92,7 @@ CREATE TABLE `REL_USER_WINESHOP` (
   `ID` int NOT NULL,
   `WINESHOP_ID` int NOT NULL,
   `USER_ID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -121,7 +121,7 @@ CREATE TABLE `REL_WINESHOP_WAREHOUSE` (
   `ID` int NOT NULL,
   `ID_WAREHOUSE` int NOT NULL,
   `ID_WINESHOP` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `REL_WINESHOP_WAREHOUSE`
@@ -140,7 +140,7 @@ CREATE TABLE `REL_WINE_VINEYARD` (
   `ID` int NOT NULL,
   `WINE_ID` int NOT NULL,
   `VINEYARD_ID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -168,7 +168,7 @@ CREATE TABLE `REL_WINE_WAREHOUSE` (
   `ID` int NOT NULL,
   `WINE_ID` int NOT NULL,
   `WAREHOUSE_ID` int NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -203,7 +203,7 @@ CREATE TABLE `USER` (
   `EMAIL` varchar(255) NOT NULL,
   `PASSWORD` varchar(255) NOT NULL,
   `TYPE` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -214,7 +214,7 @@ CREATE TABLE `USER` (
 CREATE TABLE `VINEYARD` (
   `ID` int NOT NULL,
   `NAME` varchar(512) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -225,7 +225,7 @@ CREATE TABLE `VINEYARD` (
 CREATE TABLE `WAREHOUSE` (
   `ID` int NOT NULL,
   `NAME` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `WAREHOUSE`
@@ -244,9 +244,9 @@ CREATE TABLE `WINE` (
   `ID` int NOT NULL,
   `NAME` varchar(255) NOT NULL,
   `YEAR` int NOT NULL,
-  `PRODUCER` varchar(2056) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
-  `TECHNOTES` varchar(2056) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+  `PRODUCER` varchar(2056) CHARACTER SET utf8mb4  NOT NULL,
+  `TECHNOTES` varchar(2056) CHARACTER SET utf8mb4  NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 -- --------------------------------------------------------
 
@@ -257,7 +257,7 @@ CREATE TABLE `WINE` (
 CREATE TABLE `WINESHOP` (
   `ID` int NOT NULL,
   `NAME` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 ;
 
 --
 -- Dumping data for table `WINESHOP`
