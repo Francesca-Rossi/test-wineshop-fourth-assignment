@@ -33,3 +33,7 @@ http://marcoparoni.altervista.org/installare-maven-su-windows-10/?doing_wp_cron=
 - Go into root folder project
 - cd ui.fx/
 - mvn javafx:run
+
+#How to create a test class
+- open the class and click alt+invio on the name of class.
+- selected "generated test"
